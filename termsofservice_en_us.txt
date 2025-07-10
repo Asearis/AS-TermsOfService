@@ -4,8 +4,6 @@ Terms of Service
 Version 20240909
 Last revised on September 9, 2024
 
-This is a test line
-
 ### The Gist
 
 Asearis Data Systems, Inc. (Asearis) operates the DCloud™ service, which we hope you use. If you use it, please use it responsibly. If you don't, we'll have to terminate your account.

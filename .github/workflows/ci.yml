@@ -1,0 +1,25 @@
+name: CI
+
+# This repo's CI delegates to the shared reusable workflow in AS-Build.
+# It runs ./build/build.sh (if present), packages bin/, and uploads to GCS.
+# The aggregator in AS-DeCloud-Interconnect picks up the latest SHA from this repo's latest.txt on its next run.
+#
+# Required GitHub repo Variables (Settings → Secrets and variables → Actions → Variables):
+#   GCP_PROJECT_ID    = asearis-sharecloud
+#   GCP_WIF_PROVIDER  = projects/193260080360/locations/global/workloadIdentityPools/github/providers/github-actions-provider
+#   GCP_DEPLOY_SA     = java-module-builder@asearis-sharecloud.iam.gserviceaccount.com
+#   GCS_JAVA_BUILDS   = asearis-java-builds
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  build:
+    uses: Asearis/AS-Build/.github/workflows/reusable-java-module-build.yml@main
+    secrets: inherit

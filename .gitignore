@@ -1,0 +1,9 @@
+bin/*
+dist/*
+include/*
+.classpath
+.project
+.DS_Store
+_notes
+.settings/*
+/bin/

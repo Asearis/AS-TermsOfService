@@ -1,9 +1,88 @@
-bin/*
-dist/*
-include/*
+# ================= 
+# Build Outputs & Directories
+# ================= 
+bin/
+dist/
+include/
+target/
+native/target/
+*.nar
+
+# ================= 
+# Dependencies
+# ================= 
+lib/
+node_modules/
+
+# ================= 
+# IDEs & Editors
+# ================= 
+# Eclipse
 .classpath
 .project
+.settings/
+
+# IntelliJ / JetBrains
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# VS Code
+.vscode/
+
+# ================= 
+# Language Specific
+# ================= 
+# Python
+__pycache__/
+*.pyc
+
+# Rust
+native/Cargo.lock
+*.so
+*.dylib
+*.dll
+*.rlib
+*.pdb
+
+# ================= 
+# Logs & Crash Dumps
+# ================= 
+logs/
+*.log
+hs_err_pid*
+replay_pid*
+
+# ================= 
+# Temporary & Backup Files
+# ================= 
+*.tmp
+*.temp
+*.bak
+*.bak[0-9]
+*.old
+*~
+*.swp
+*.swo
+
+# ================= 
+# OS Generated Files & Thumbnails
+# ================= 
 .DS_Store
+.DS_Store?
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+
+# ================= 
+# Miscellaneous / Testing
+# ================= 
+.ant-targets-build.xml
+src/test_*
+test/*
 _notes
-.settings/*
-/bin/
